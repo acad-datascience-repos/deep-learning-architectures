@@ -21,7 +21,7 @@ class TestCNNModel(unittest.TestCase):
         self.assertIsInstance(model, tf.keras.Sequential)
         
         # Check that the output layer has 10 units (for digits 0-9)
-        self.assertEqual(model.layers[-1].output_shape[-1], 10)
+        self.assertEqual(model.layers[-1].units, 10)
     
     def test_training_performance(self):
         """Test that the model achieves reasonable accuracy"""
